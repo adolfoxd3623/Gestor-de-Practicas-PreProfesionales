@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante - Prácticas ULEAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <aside class="menu">
+        <div class="marca"><span class="logo">U</span><b>Prácticas ULEAM</b></div>
+        <small>Estudiante</small>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#practica">Mi práctica</a>
+            <a href="#horas">Registro de horas</a>
+            <a href="#documentos">Documentos</a>
+        </nav>
+        <a class="salir" href="index.html">Cerrar sesión</a>
+    </aside>
+    <header><span>Gestión de prácticas preprofesionales</span><b>Bryan Chiquito</b></header>
+    <main>
+        <section id="inicio" class="seccion">
+            <div class="encabezado">
+                <h1>Hola, Bryan</h1>
+                <p>Este es el resumen de tus prácticas preprofesionales.</p>
+            </div>
+            <div class="tarjetas">
+                <article class="tarjeta"><small>Horas aprobadas</small><b>168 h</b><span>de 240 horas</span></article>
+                <article class="tarjeta"><small>Horas pendientes</small><b>8 h</b><span>por revisar</span></article>
+                <article class="tarjeta"><small>Documentos</small><b>3 / 4</b><span>aprobados</span></article>
+                <article class="tarjeta"><small>Avance</small><b>70 %</b><span>del período</span></article>
+            </div>
+            <div class="columnas">
+                <article class="panel progreso">
+                    <h2>Progreso de la práctica</h2>
+                    <h1>70 %</h1>
+                    <p>168 de 240 horas completadas.</p>
+                    <progress value="70" max="100" aria-label="Avance de ejemplo: 70 por ciento">70 %</progress>
+                    <p>Avance de ejemplo para presentar el diseño.</p>
+                </article>
+                <article class="panel">
+                    <h2>Próxima entrega</h2>
+                    <p>Informe de actividades del mes</p>
+                    <p class="nota">30 de octubre de 2026</p>
+                    <a class="boton" href="#documentos">Seleccionar documento</a>
+                </article>
+            </div>
+        </section>
+        <section id="practica" class="seccion">
+            <div class="encabezado">
+                <h1>Mi práctica</h1>
+                <p>Información general de la asignación.</p>
+            </div>
+            <article class="panel">
+                <h2>Datos de la práctica</h2>
+                <dl>
+                    <dt>Estudiante</dt><dd>Bryan Chiquito</dd>
+                    <dt>Carrera</dt><dd>Ingeniería en Software</dd>
+                    <dt>Institución</dt><dd>3mp música y electrónica</dd>
+                    <dt>Área</dt><dd>Soporte técnico</dd>
+                    <dt>Docente tutor</dt><dd>Maykel Castro</dd>
+                    <dt>Período</dt><dd>1 de septiembre al 18 de diciembre de 2026</dd>
+                    <dt>Horas requeridas</dt><dd>240 horas</dd>
+                </dl>
+            </article>
+        </section>
+        <section id="horas" class="seccion">
+            <div class="encabezado">
+                <h1>Registro de horas</h1>
+                <p>Completa el formulario para comprobar los datos de una jornada.</p>
+            </div>
+            <div class="panel tabla">
+                <table>
+                    <thead><tr><th scope="col">Fecha</th><th scope="col">Actividad</th><th scope="col">Horario</th><th scope="col">Horas</th><th scope="col">Estado</th></tr></thead>
+                    <tbody>
+                        <tr><td>19/10/2026</td><td>Mantenimiento de equipos</td><td>08:00–16:00</td><td>8</td><td>Pendiente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel">
+                <form id="formHoras" novalidate>
+                    <label for="fecha">Fecha de la jornada</label>
+                    <input id="fecha" name="fecha" type="date" required min="2026-09-01" max="2026-12-18">
+                    <div class="fila">
+                    <label for="entrada">Hora de entrada</label>
+                    <input id="entrada" name="entrada" type="time" required >
+                    <label for="salida">Hora de salida</label>
+                    <input id="salida" name="salida" type="time" required >
+                    </div>
+                    <label for="actividad">Actividad realizada</label>
+                    <textarea id="actividad" name="actividad" required minlength="10" maxlength="300"></textarea>
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                    <button type="submit">Validar jornada</button>
+                </form>
+            </div>
+        </section>
+        <section id="documentos" class="seccion">
+            <div class="encabezado">
+                <h1>Documentos</h1>
+                <p>Revisa los documentos de ejemplo y valida la selección de un PDF.</p>
+            </div>
+            <div class="panel tabla">
+                <table>
+                    <thead><tr><th scope="col">Documento</th><th scope="col">Estado</th></tr></thead>
+                    <tbody>
+                        <tr><td>Carta de aceptación</td><td>Aprobado</td></tr>
+                        <tr><td>Plan de actividades</td><td>Aprobado</td></tr>
+                        <tr><td>Informe inicial</td><td>Aprobado</td></tr>
+                        <tr><td>Informe mensual</td><td>Pendiente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel">
+                <form id="formDocumento" novalidate>
+                    <label for="tipo">Tipo de documento</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Carta de aceptación</option>
+                        <option>Plan de actividades</option>
+                        <option>Informe inicial</option>
+                        <option>Informe mensual</option>
+                    </select>
+                    <label for="archivo">Archivo PDF (máximo 5 MB)</label>
+                    <input id="archivo" name="archivo" type="file" required accept=".pdf,application/pdf">
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                    <button type="submit">Validar documento</button>
+                </form>
+            </div>
+        </section>
+        <footer>ULEAM · Maqueta académica. Datos de ejemplo; los formularios no guardan cambios.</footer>
+    </main>
+    <script src="js/estudiante.js"></script>
+</body>
+</html>

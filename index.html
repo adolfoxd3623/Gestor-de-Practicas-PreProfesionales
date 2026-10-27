@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso - Prácticas ULEAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="login">
+    <div class="acceso">
+        <span class="logo">U</span>
+        <h1>Iniciar sesión</h1>
+        <p class="nota">Gestión de prácticas preprofesionales</p>
+        <form id="formLogin" novalidate>
+            <label for="usuario">Nombre de usuario</label>
+            <input id="usuario" name="usuario" required autocomplete="username">
+            <label for="clave">Contraseña</label>
+            <input id="clave" name="clave" type="password" required autocomplete="current-password">
+            <p id="aviso" class="aviso" role="alert"></p>
+            <button type="submit">Ingresar</button>
+        </form>
+        <details class="nota">
+            <summary>Usuarios de demostración</summary>
+            <p>Bryan Chiquito / estudiante123</p>
+            <p>Maykel Castro / docente123</p>
+            <p>Adolfo Meneses / admin123</p>
+        </details>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

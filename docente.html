@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docente - Prácticas ULEAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <aside class="menu">
+        <div class="marca"><span class="logo">U</span><b>Prácticas ULEAM</b></div>
+        <small>Docente</small>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#revisiones">Revisiones</a>
+        </nav>
+        <a class="salir" href="index.html">Cerrar sesión</a>
+    </aside>
+    <header><span>Gestión de prácticas preprofesionales</span><b>Maykel Castro</b></header>
+    <main>
+        <section id="inicio" class="seccion">
+            <div class="encabezado">
+                <h1>Panel del docente</h1>
+                <p>Bienvenido, Maykel Castro.</p>
+            </div>
+            <div class="tarjetas">
+                <article class="tarjeta"><small>Estudiantes</small><b>1</b><span>asignado</span></article>
+                <article class="tarjeta"><small>Horas por revisar</small><b>8 h</b><span>una jornada</span></article>
+                <article class="tarjeta"><small>Documentos</small><b>1</b><span>pendiente</span></article>
+                <article class="tarjeta"><small>Avance</small><b>70 %</b><span>del estudiante</span></article>
+            </div>
+            <div class="panel tabla">
+                <table>
+                    <thead><tr><th scope="col">Estudiante</th><th scope="col">Institución</th><th scope="col">Avance</th></tr></thead>
+                    <tbody>
+                        <tr><td>Bryan Chiquito</td><td>3mp música y electrónica</td><td>70 %</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="revisiones" class="seccion">
+            <div class="encabezado">
+                <h1>Revisiones pendientes</h1>
+                <p>Comprueba los datos de una revisión de ejemplo.</p>
+            </div>
+            <div class="panel tabla">
+                <table>
+                    <thead><tr><th scope="col">Registro</th><th scope="col">Estudiante</th><th scope="col">Estado</th></tr></thead>
+                    <tbody>
+                        <tr><td>Jornada del 19/10/2026</td><td>Bryan Chiquito</td><td>Pendiente</td></tr>
+                        <tr><td>Informe mensual</td><td>Bryan Chiquito</td><td>Pendiente</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel">
+                <form id="formRevision" novalidate>
+                    <label for="registro">Registro a revisar</label>
+                    <select id="registro" name="registro" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Jornada del 19/10/2026</option>
+                        <option>Informe mensual</option>
+                    </select>
+                    <label for="resultado">Resultado de la revisión</label>
+                    <select id="resultado" name="resultado" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Aprobado</option>
+                        <option>Observado</option>
+                    </select>
+                    <label for="observacion">Observación del docente</label>
+                    <textarea id="observacion" name="observacion" required minlength="5" maxlength="300"></textarea>
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                    <button type="submit">Validar revisión</button>
+                </form>
+            </div>
+        </section>
+        <footer>ULEAM · Maqueta académica. Datos de ejemplo; los formularios no guardan cambios.</footer>
+    </main>
+    <script src="js/docente.js"></script>
+</body>
+</html>

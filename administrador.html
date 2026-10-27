@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Prácticas ULEAM</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <aside class="menu">
+        <div class="marca"><span class="logo">U</span><b>Prácticas ULEAM</b></div>
+        <small>Administrador</small>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#personas">Estudiantes y docentes</a>
+            <a href="#asignar">Asignar práctica</a>
+        </nav>
+        <a class="salir" href="index.html">Cerrar sesión</a>
+    </aside>
+    <header><span>Gestión de prácticas preprofesionales</span><b>Adolfo Meneses</b></header>
+    <main>
+        <section id="inicio" class="seccion">
+            <div class="encabezado">
+                <h1>Panel de administración</h1>
+                <p>Bienvenido, Adolfo Meneses.</p>
+            </div>
+            <div class="tarjetas">
+                <article class="tarjeta"><small>Estudiantes</small><b>1</b><span>registrado</span></article>
+                <article class="tarjeta"><small>Docentes</small><b>1</b><span>registrado</span></article>
+                <article class="tarjeta"><small>Prácticas</small><b>1</b><span>asignada</span></article>
+                <article class="tarjeta"><small>Período</small><b>2026–2</b><span>académico</span></article>
+            </div>
+            <div class="panel tabla">
+                <table>
+                    <thead><tr><th scope="col">Nombre</th><th scope="col">Rol</th></tr></thead>
+                    <tbody>
+                        <tr><td>Bryan Chiquito</td><td>Estudiante</td></tr>
+                        <tr><td>Maykel Castro</td><td>Docente</td></tr>
+                        <tr><td>Adolfo Meneses</td><td>Administrador</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="personas" class="seccion">
+            <div class="encabezado">
+                <h1>Estudiantes y docentes</h1>
+                <p>Formulario de ejemplo para comprobar datos personales.</p>
+            </div>
+            <div class="panel">
+                <form id="formPersona" novalidate>
+                    <label for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" type="text" required minlength="5" maxlength="60">
+                    <label for="cedula">Cédula</label>
+                    <input id="cedula" name="cedula" type="text" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" required maxlength="80">
+                    <label for="rol">Rol</label>
+                    <select id="rol" name="rol" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Estudiante</option>
+                        <option>Docente</option>
+                    </select>
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                    <button type="submit">Validar persona</button>
+                </form>
+            </div>
+        </section>
+        <section id="asignar" class="seccion">
+            <div class="encabezado">
+                <h1>Asignar práctica</h1>
+                <p>Comprueba los datos de una asignación de ejemplo.</p>
+            </div>
+            <div class="panel">
+                <form id="formAsignacion" novalidate>
+                    <label for="estudiante">Estudiante</label>
+                    <select id="estudiante" name="estudiante" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Bryan Chiquito</option>
+                    </select>
+                    <label for="docente">Docente</label>
+                    <select id="docente" name="docente" required>
+                        <option value="">Selecciona una opción</option>
+                        <option>Maykel Castro</option>
+                    </select>
+                    <label for="institucion">Institución</label>
+                    <input id="institucion" name="institucion" type="text" required minlength="3" maxlength="60">
+                    <label for="fechaInicio">Fecha de inicio</label>
+                    <input id="fechaInicio" name="fechaInicio" type="date" required >
+                    <label for="fin">Fecha de fin</label>
+                    <input id="fin" name="fin" type="date" required >
+                    <label for="horas">Horas requeridas</label>
+                    <input id="horas" name="horas" type="number" required min="1" max="1000" step="1">
+                    <p class="aviso" role="status" aria-live="polite"></p>
+                    <button type="submit">Validar asignación</button>
+                </form>
+            </div>
+        </section>
+        <footer>ULEAM · Maqueta académica. Datos de ejemplo; los formularios no guardan cambios.</footer>
+    </main>
+    <script src="js/administrador.js"></script>
+</body>
+</html>
